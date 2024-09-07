@@ -1,4 +1,4 @@
-package com.nrv.SpringSecurityV1;
+package com.nrv.SpringSecurityV2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

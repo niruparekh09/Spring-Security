@@ -1,4 +1,4 @@
-package com.nrv.SpringSecurityV1;
+package com.nrv.SpringSecurityV2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
