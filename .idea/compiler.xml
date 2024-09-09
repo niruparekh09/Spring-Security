@@ -10,12 +10,14 @@
         <module name="SpringSecurityV2" />
         <module name="SpringSecurityV1" />
         <module name="SpringSecurityJWT" />
+        <module name="SpringSecurityOAuth2" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringSecurityJWT" options="-parameters" />
+      <module name="SpringSecurityOAuth2" options="-parameters" />
       <module name="SpringSecurityV1" options="-parameters" />
       <module name="SpringSecurityV2" options="-parameters" />
     </option>
