@@ -20,8 +20,14 @@ public class UserController {
         return ResponseEntity.ok(service.getUserList());
     }
 
-    @PostMapping
-    ResponseEntity<User> addUser(@RequestBody User newUser) {
+    @PostMapping("/register")
+    ResponseEntity<User> register(@RequestBody User newUser) {
         return ResponseEntity.ok(service.addUser(newUser));
     }
+
+    @PostMapping("/login")
+    ResponseEntity<String> login(@RequestBody User user) {
+        return ResponseEntity.ok(service.verify(user));
+    }
+
 }
