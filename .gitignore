@@ -1,0 +1,49 @@
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code (optional, if ever opened) ###
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Logs ###
+*.log
+
+### Spring Boot ###
+target/
+build/
+
+### Maven ###
+.mvn/wrapper/maven-wrapper.jar
+!**/.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
+
+### Gradle ###
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Environment files ###
+.env
+.env.*
+application-local.yml
+application-local.properties
+
+### Generated files ###
+*.class
+
+### Test reports ###
+/reports/
+/surefire-reports/
+
+### Temporary files ###
+tmp/
+*.tmp
+*.bak
+*.swp
+/.idea/
