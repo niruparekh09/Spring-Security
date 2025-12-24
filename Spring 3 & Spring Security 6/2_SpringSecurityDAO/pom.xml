@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nrv</groupId>
-	<artifactId>SpringSecurityV1</artifactId>
+	<artifactId>2_SpringSecurityDAO</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringSecurityV1</name>
-	<description>Project for Basic Spring Security</description>
+	<name>SpringSecurityV2</name>
+	<description>Project for Spring Security with DAO Based Auth</description>
 	<url/>
 	<licenses>
 		<license/>

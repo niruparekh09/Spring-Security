@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nrv</groupId>
-    <artifactId>SpringSecurityJWT</artifactId>
+    <artifactId>3_SpringSecurityJWT</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SpringSecurityJWT</name>
     <description>Project for Spring Security with JWT Based Auth</description>
