@@ -10,6 +10,7 @@ import org.springframework.security.web.authentication.ott.OneTimeTokenGeneratio
 import org.springframework.security.web.authentication.ott.RedirectOneTimeTokenGenerationSuccessHandler;
 import org.springframework.security.web.util.UrlUtils;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
@@ -39,15 +40,12 @@ public class OttSuccessHandler implements OneTimeTokenGenerationSuccessHandler {
     public void handle(HttpServletRequest request, HttpServletResponse response, OneTimeToken oneTimeToken) throws IOException, ServletException {
 
         // 3. Build the "Magic Link" dynamically
-        // Using UriComponentsBuilder ensures the link works on localhost, dev, or prod automatically.
-        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(UrlUtils.buildFullRequestUrl(request))
-                .replacePath(request.getContextPath())  // Keeps the app context (e.g., /myapp) if it exists
-                .replaceQuery(null)                     // Removes ?username=nrv16 from original request
-                .fragment(null)
-                .path("/login/ott")                     // Point to the login processing endpoint
-                .queryParam("token", oneTimeToken.getTokenValue()); // Add the sensitive token
-
-        String magicLink = builder.toUriString();
+        // This way ensures the link works on localhost, dev, or prod automatically.
+        String magicLink = ServletUriComponentsBuilder.fromContextPath(request) // or fromRequest(request)
+                .replacePath(null) // Reset path just in case
+                .path("/login/ott") // The endpoint that CONSUMES the token
+                .queryParam("token", oneTimeToken.getTokenValue())
+                .toUriString();
 
         // 4. Debugging Block (Useful for local testing if SendGrid quota is exceeded)
         System.out.println("------------------------------------------------");
