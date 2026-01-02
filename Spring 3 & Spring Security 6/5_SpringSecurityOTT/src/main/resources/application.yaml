@@ -1,6 +1,13 @@
 spring:
   application:
     name: ott
+
 gg:
   jte:
     development-mode: true
+
+sendgrid:
+  api-key: ${SENDGRID_KEY}
+
+from:
+  email: ${FROM}
