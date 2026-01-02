@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: mfa
+
+#logging:
+#  level:
+#    org.springframework.security: TRACE
